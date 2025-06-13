@@ -8,3 +8,5 @@ jobs:
               uses: actions/checkout@v4
             - name: Compilar código
               run: gcc hola_mundo.c -o hola_mundo
+            - name: Ejecucion de código
+              run: ./hola_mundo
