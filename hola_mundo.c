@@ -8,6 +8,7 @@ int suma(int n) {
 
 int main() {
 	printf("Hola, Mundo\n");
+	printf("Luis Estuvo aquí xd\n");
 }
 
 int factorial(int n){
