@@ -3,7 +3,7 @@ on: push
 jobs:
     compilar-y-ejecutar:
         runs-on: ubuntu-latest
-        stetps:
+        steps:
             - name: Clonar el repositorio
               uses: actions/checkout@v4
             - name: Compilar código
