@@ -14,5 +14,5 @@ jobs:
               run: |
                 tg \
                 -T ${{ secrets.TOKEN_BOT }} \
-                -I ${{ secrets.CHAT_ID }}" \
+                -I ${{ secrets.CHAT_ID }} \
                 "Actualización en la rama Development - Realizá un fetch para traer los cambios más actualizados"
