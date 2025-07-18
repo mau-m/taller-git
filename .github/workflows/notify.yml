@@ -8,11 +8,11 @@ jobs:
         steps:
             - name: Descargar y hacer ejecutable telegram-bot-send.sh
               run: |
-                wget https://raw.githubusercontent.com/up9cloud/telegram-bot-send.sh/master/telegram-bot-send.sh
-                chmod +x telegram-bot-send.sh
+                curl -o /usr/local/bin/tg https://raw.githubusercontent.com/up9cloud/telegram-bot-send.sh/master/tg.ash
+                chmod +x /usr/local/bin/tg
             - name: Notificar la acción
               run: |
-                ./telegram-bot-send-sh \
-                --token "{{ secrets.TOKEN_BOT }}" \
-                --chatid "{{ secrets.CHAT_ID }}" \
+                tg \
+                -T ${{ secrets.TOKEN_BOT }} \
+                -I ${{ secrets.CHAT_ID }}" \
                 "Actualización en la rama Development - Realizá un fetch para traer los cambios más actualizados"
